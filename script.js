@@ -283,7 +283,6 @@ document.addEventListener("keydown", event => {
     if (event.key == "Tab") {
         event.preventDefault();
     } else if (event.metaKey && event.shiftKey && event.keyCode == 82) {
-        console.log("r")
         clearInterval(renderLoop)
         localStorage.removeItem("game");
         location.reload();
