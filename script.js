@@ -50,16 +50,6 @@ game.upgrades = [
         sellingPrice: 65.00
     },
     {
-        type: "production",
-        name: "Factory",
-        get upgradeCost() { return (((game.player.factories + 2) ** 3) + 80) * 4; }
-    },
-    {
-        type: "production",
-        name: "Worker",
-        get upgradeCost() { return (game.player.workers + 2) ** 2.3 + 60; }
-    },
-    {
         type: "sales",
         name: "Auto Seller",
         maxed: false,
@@ -69,7 +59,17 @@ game.upgrades = [
         type: "sales",
         name: "Advertisement",
         get upgradeCost() { return ((game.player.advertisements ** 1.1) * 800); }
-    }
+    },
+    {
+        type: "production",
+        name: "Factory",
+        get upgradeCost() { return (((game.player.factories + 2) ** 3) + 80) * 4; }
+    },
+    {
+        type: "production",
+        name: "Worker",
+        get upgradeCost() { return (game.player.workers + 2) ** 2.3 + 60; }
+    },
 ].map(upgrade => {
     if (upgrade.type == "magnet") {
         upgrade.upgradeCost = (upgrade.sellingPrice ** (2/3)) * 1000;
