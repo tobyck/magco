@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+/* main container positioning */
+
+.mainContainer {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%, 0);
+    font-family: "Courier Prime", monospace;
+}
+
+/* general style */
+
+h1 {
+    text-align: center;
+}
+
+.stats {
+    line-height: 26px;
+}
+
+button {
+    border-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: #888;
+    background-color: #e8e8e8;
+    font-family: -apple-system, BlinkMacSystemFont, "sans-serif";
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+button:disabled {
+    background-color: #eee;
+}
+
+.disabled:hover {
+    background-color: #eee !important;
+}
+
+/* top buttons */
+
+.topButtons {
+    padding: 15px;
+    padding-bottom: 12px;
+}
+
+.bottomButtons {
+    padding: 15px;
+}
+
+.topButtons button {
+    width: 125px;
+    height: 30px;
+}
+
+#makeMagnet {
+    float: left;
+    display: inline-block;
+}
+
+#sellMagnet, #info {
+    float: right;
+    display: inline-block;
+}
+
+#info {
+    height: 30px;
+    width: 60px;
+}
+
+#autoSeller {
+    width: 190px;
+    height: 30px;
+}
+
+/* upgrade buttons */
+
+#upgrades button {
+    width: 300px;
+    padding: 15px;
+    padding-left: 17px;
+    text-align: left;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    white-space: pre;
+}
+
+#upgrades button:disabled {
+    opacity: 0.5;
+}
+
+#upgrades {
+    padding-bottom: 50px;
+}
