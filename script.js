@@ -209,12 +209,11 @@ game.upgrades.slice(1).forEach((upgrade, index) => {
             game.player.autoSeller.activated = true;
             game.player.autoSeller.available = true;
             game.player.money -= upgrade.upgradeCost;
-            if (!game.upgrades[7].maxed) {
+            if (!game.upgrades[5].maxed) {
                 game.player.autoSeller.time -= 0.15;
             } if (game.player.autoSeller.time <= 0.1) {
-                game.upgrades[7].maxed = true;
-            } $("autoSeller").disabled = false;
-            setSalesLoop();;
+                game.upgrades[5].maxed = true;
+            } setSalesLoop();;
         }
     } else if (upgrade.name == "Factory") {
         button.onclick = () => {
