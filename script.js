@@ -242,7 +242,7 @@ document.addEventListener("click", event => {
             game.player.autoSeller.activated = !game.player.autoSeller.activated;
         }
     } else if (event.target.id == "info") {
-        alert("Beat the game by being richer than Elon Musk who, at the time of making this is the richest person in the world with $267.3 billion USD.\n\n------------------------------\n\nAuthor: Toby Connor-Kebbell\nDate: March 2022\nVersion: 0.2");
+        alert("Beat the game by being richer than Elon Musk who, at the time of making this is the richest person in the world with $267.3 billion USD. If you'd like to restart the game earlier, press Cmd/Ctrl + Shift + R.\n\n------------------------------\n\nAuthor: Toby Connor-Kebbell\nDate: March 2022\nVersion: 0.2");
     }
 });
 
@@ -281,6 +281,12 @@ var renderLoop = setInterval(() => game.render(), 83);
 // prevent tab from selecting buttons
 document.addEventListener("keydown", event => {
     if (event.key == "Tab") {
+        event.preventDefault();
+    } else if (event.metaKey && event.shiftKey && event.keyCode == 82) {
+        console.log("r")
+        clearInterval(renderLoop)
+        localStorage.removeItem("game");
+        location.reload();
         event.preventDefault();
     }
 });
