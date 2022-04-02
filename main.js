@@ -23,7 +23,7 @@ function maxDecimals(number, max) {
 }
 
 // define all upgrades
-game.upgrades = [
+game.upgrades = JSON.parse(localStorage.getItem("upgrades")) || [
     {
         type: "magnet",
         name: "Flexible",
@@ -152,6 +152,7 @@ game.render = function() {
     }
 
     localStorage.setItem("game", JSON.stringify(game.player));
+    localStorage.setItem("upgrades", JSON.stringify(game.upgrades));
 }
 
 // restore game from local storage if possible
