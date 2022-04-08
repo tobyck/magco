@@ -99,6 +99,8 @@ game.render = function() {
         $("sellMagnet").disabled = false;   
     } if (!this.player.autoSeller.available) {
         $("autoSeller").disabled = true;
+    } else {
+        $("autoSeller").disabled = false;
     }
 
     for (upgrade of game.upgrades.slice(1)) {
